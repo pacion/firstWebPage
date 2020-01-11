@@ -62,23 +62,9 @@ body{
 	letter-spacing: 10px;
 	margin-left: 40%;
 	margin-bottom: 1%;
-	
-	text-shadow: 0 1px 0 #ccc,
-				 0 2px 0 #c9c9c9,
-				 0 3px 0 #bbb,
-				 0 4px 0 #b9b9b9,
-				 0 5px 0 #aaa,
-				 0 6px 1px rgba(0,0,0,.1),
-				 0 0 5px rgba(0,0,0,.1),
-				 0 1px 3px rgba(0,0,0,.3),
-				 0 3px 5px rgba(0,0,0,.2),
-				 0 5px 10px rgba(0,0,0,.25),
-				 0 10px 10px rgba(0,0,0,.2),
-				 0 20px 20px rgba(0,0,0,.15);
-
 }
 
-.header > h2{
+.header > p{
 	font-size: 2rem;
 	letter-spacing: 5px;
 	margin-top: 0;
@@ -89,10 +75,10 @@ body{
 /* ---------------- menu ---------------- */ 
 
 .menu-wrap {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  z-index: 1;
+  	position: fixed;
+  	top: 40px;
+ 	left: 40px;
+  	z-index: 1;
 }
 
 .menu-wrap .toggler {
@@ -219,14 +205,6 @@ body{
 	position: relative;
 }
 
-.section-about__header > h3{
-	font-size: 3rem;
-	letter-spacing: 2px;
-	line-height: 3rem;
-	padding: 0;
-	text-align: center;
-}
-
 .section-about-odd{
 	display: flex;
 	flex-direction: column;
@@ -271,11 +249,19 @@ body{
 	clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 
-
 .section-about__article{
+	text-align: center;
 	width: 70%;
 	margin-bottom: 2%;
 	font-family: 'Acme', sans-serif;
+}
+
+.section-about__article > h2{
+	font-size: 2rem;
+	letter-spacing: 1px;
+	line-height: 3rem;
+	padding: 0;
+	text-align: center;
 }
 
 .flex-article{
@@ -286,7 +272,7 @@ body{
 
 .section-about__article > p{
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	
 	margin-bottom: 100px;
 	letter-spacing: 1px;
@@ -353,7 +339,7 @@ body{
 .card-description{
 	font-size: 1rem;
 	text-align: left;
-	margin: 30px 20px;
+	margin: 0;
 }
 .card-description > ul{
 	list-style-type: none;
@@ -367,11 +353,15 @@ body{
   transform: perspective(900px) rotateY(180deg);
 }
 
-.card:hover .front {
+.card:hover .front,
+.card:active .front,
+.card:focus .front{
   transform: perspective(900px) rotateY(-180deg);
 }
 
-.card:hover .back {
+.card:hover .back,
+.card:active .back
+.card:focus .back {
   transform: perspective(900px) rotateY(0deg);
 }
 
@@ -464,20 +454,19 @@ body{
 		font-size: 2rem; 
 		margin-left: 0%;
 	}
-	.header > h2{
+	.header > p{
 		visibility: hidden;
 	}
 	.map{
 		display: none;
 	}
 	.card{
-		width: 46%;	
-		margin: 1%;
+		width: 90%;	
+		margin: 5%;
 	}
 	#last-card{
-		margin-bottom: 24%;
+		margin-bottom: 30%;
 	}
-	
 }
 @media (min-width:481px)  {
 	.map{
@@ -489,10 +478,28 @@ body{
 		font-size: 3rem; 
 		margin-left: 30%;
 	}
-	.header > h2{
+	.header > p{
 		visibility: visible;
 		font-size: 1rem; 
 		margin-left: 30%;
+	}
+	.card{
+		width: 60%;	
+		margin: 2%;
+	}
+	.header > h1{
+		text-shadow: 0 1px 0 #ccc,
+					 0 2px 0 #c9c9c9,
+					 0 3px 0 #bbb,
+					 0 4px 0 #b9b9b9,
+					 0 5px 0 #aaa,
+					 0 6px 1px rgba(0,0,0,.1),
+					 0 0 5px rgba(0,0,0,.1),
+					 0 1px 3px rgba(0,0,0,.3),
+					 0 3px 5px rgba(0,0,0,.2),
+					 0 5px 10px rgba(0,0,0,.25),
+					 0 10px 10px rgba(0,0,0,.2),
+					 0 20px 20px rgba(0,0,0,.15);
 	}
 }
 @media (min-width:641px)  { 
@@ -500,7 +507,7 @@ body{
 		font-size: 5rem; 
 		margin-left: 40%;
 	}
-	.header > h2{
+	.header > p{
 		margin-left: 40%;
 		font-size: 1.25rem;
 	}
@@ -509,7 +516,7 @@ body{
 		height: 300px;
 	}
 	.card{
-		width: 28%;	
+		width: 45%;	
 		margin: 2%;
 	}
 }
@@ -518,7 +525,7 @@ body{
 		font-size: 5.5rem; 
 		margin-left: 40%;
 	}
-	.header > h2{
+	.header > p{
 		margin-left: 40%;
 		font-size: 1.3rem;
 	}
@@ -529,6 +536,17 @@ body{
 	#last-card{
 		margin-bottom: 10%;
 	}
+	.card{
+		width: 45%;	
+		margin: 2%;
+	}
+	.section-about__article > h2{
+		font-size: 3rem;
+		letter-spacing: 2px;
+	}
+	.section-about__article > p{
+		font-size: 1.5rem;
+	}
 
 }
 @media (min-width:1025px) { 
@@ -536,7 +554,7 @@ body{
 		font-size: 7rem; 
 		margin-left: 40%;
 	}
-	.header > h2{
+	.header > p{
 		margin-left: 40%;
 		font-size: 1.5rem;
 	}
